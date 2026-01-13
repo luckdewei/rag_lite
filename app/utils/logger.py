@@ -28,10 +28,6 @@ class LoggerManager:
         self._initalize()
 
     def _initalize(self):
-        # 如果启动文件写入的话，创建日志文件写入目录
-        if self.enable_file:
-            # mkdir创建目录， parents=True如果父目录不存在，则自动创建所有的父目录，exist_ok如果目录已经存在，不抛出错误
-            Path(self.log_dir).mkdir(parents=True, exist_ok=True)
         # 获取根日志记录器
         root_logger = logging.getLogger()
         # 移除原有的所有处理器，防止重复添加
@@ -49,6 +45,8 @@ class LoggerManager:
             root_logger.addHandler(console_handler)
         # 如果启动文件日志的话
         if self.enable_file:
+            # mkdir创建目录， parents=True如果父目录不存在，则自动创建所有的父目录，exist_ok如果目录已经存在，不抛出错误
+            Path(self.log_dir).mkdir(parents=True, exist_ok=True)
             # 创建日志文件路径 1.不优雅 2.还得考虑操作系统兼容 \ /
             log_path = self.log_dir / self.log_file
             # 创建控制台日志处理器 sys.stdout就是指的标准输出

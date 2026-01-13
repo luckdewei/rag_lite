@@ -1,0 +1,6 @@
+chroma_database
+./logs
+chroma_db
+.env
+logs
+logs/
