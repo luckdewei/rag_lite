@@ -1,11 +1,14 @@
-import logging
 from sqlalchemy import create_engine
 from app.config import Config
 from sqlalchemy.pool import QueuePool
+from sqlalchemy.orm import sessionmaker
+from contextlib import contextmanager
+from sqlalchemy.exc import SQLAlchemyError
 from app.models import Base
 
+from app.utils.logger import get_logger
 
-logger = logging.getLogger(__name__)
+logger = get_logger(__name__)
 
 
 def get_database_url():
@@ -25,6 +28,46 @@ engine = create_engine(
     pool_recycle=3600,  # 3600秒如果不使用回收连接
     echo=False,  # 不输出SQL日志
 )
+
+# 创建会话工厂，用于生成会话session对象
+Session = sessionmaker(bind=engine, autocommit=False, autoflush=False)
+
+
+# 是 Python 用来“把一个函数变成 with 语句”的工具 写出 with ... as ...: 的行为
+# 只是把 “进入 / 异常 / 退出” 三件事交给 Python 管
+@contextmanager
+def db_session():
+    # 创建会话的实例
+    session = Session()
+    try:
+        # 将session交给调用方使用 给 with 使用
+        yield session
+    except Exception as e:
+        logger.error(f"数据库会话错误:{e}")
+        raise
+    finally:
+        session.close()
+
+
+@contextmanager
+def db_transaction():
+    # 创建会话的实例
+    session = Session()
+    try:
+        # 将session交给调用方使用
+        yield session
+        # 事务正常结束可以自动提交
+        session.commit()
+    except SQLAlchemyError as e:
+        session.rollback()
+        logger.error(f"数据库事务错误:{e}")
+        raise
+    except Exception as e:
+        session.rollback()
+        logger.error(f"数据库会话错误:{e}")
+        raise
+    finally:
+        session.close()
 
 
 def init_db():

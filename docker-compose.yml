@@ -1,9 +1,8 @@
 
 services:
   mysql:
-    image: mysql:8.x
+    image: mysql:8.0.40
     container_name: mysql
-    restart: always
     ports:
       - "${DB_PORT}:3306"
     environment:
@@ -11,4 +10,4 @@ services:
       MYSQL_ROOT_PASSWORD: ${DB_PASSWORD}
       MYSQL_DATABASE: ${DB_NAME}
     volumes:
-      - ./data/mysql:/var/lib/mysql
+      - ./data/mysql8:/var/lib/mysql

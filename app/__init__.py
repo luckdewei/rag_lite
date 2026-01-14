@@ -17,7 +17,7 @@ def create_app(config_class=Config):
         init_db()
         logger.info("初始化数据库成功")
     except Exception as e:
-        logger.warning(f"数据库初始化失败")
+        logger.warning(f"数据库初始化失败{e}")
 
     # 获取当前文件所在的目录的绝对路径
     base_dir = os.path.abspath(os.path.dirname(__file__))

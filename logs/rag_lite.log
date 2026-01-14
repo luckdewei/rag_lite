@@ -7,3 +7,60 @@
 2026-01-12 14:44:48,112- werkzeug - INFO - _internal.py:97 - [33mPress CTRL+C to quit[0m
 2026-01-12 14:44:52,790- werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [12/Jan/2026 14:44:52] "GET / HTTP/1.1" 200 -
 2026-01-12 14:44:55,283- werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [12/Jan/2026 14:44:55] "GET / HTTP/1.1" 200 -
+2026-01-14 09:43:44,198- app - INFO - __init__.py:16 - 初始化数据库...
+2026-01-14 09:43:44,212- app.utils.db - ERROR - db.py:37 - 初始化数据库失败:'cryptography' package is required for sha256_password or caching_sha2_password auth methods
+2026-01-14 09:43:44,212- app - WARNING - __init__.py:20 - 数据库初始化失败'cryptography' package is required for sha256_password or caching_sha2_password auth methods
+2026-01-14 09:43:44,215- __main__ - INFO - main.py:13 - 正在启动RAGLite服务器在0.0.0.0:5000
+2026-01-14 09:44:10,442- app - INFO - __init__.py:16 - 初始化数据库...
+2026-01-14 09:44:10,472- app.utils.db - ERROR - db.py:37 - 初始化数据库失败:(pymysql.err.OperationalError) (1049, "Unknown database 'rag'")
+(Background on this error at: https://sqlalche.me/e/20/e3q8)
+2026-01-14 09:44:10,472- app - WARNING - __init__.py:20 - 数据库初始化失败(pymysql.err.OperationalError) (1049, "Unknown database 'rag'")
+(Background on this error at: https://sqlalche.me/e/20/e3q8)
+2026-01-14 09:44:10,474- __main__ - INFO - main.py:13 - 正在启动RAGLite服务器在0.0.0.0:5000
+2026-01-14 09:44:55,125- app - INFO - __init__.py:16 - 初始化数据库...
+2026-01-14 09:44:55,159- app.utils.db - ERROR - db.py:37 - 初始化数据库失败:(pymysql.err.OperationalError) (1049, "Unknown database 'rag'")
+(Background on this error at: https://sqlalche.me/e/20/e3q8)
+2026-01-14 09:44:55,159- app - WARNING - __init__.py:20 - 数据库初始化失败(pymysql.err.OperationalError) (1049, "Unknown database 'rag'")
+(Background on this error at: https://sqlalche.me/e/20/e3q8)
+2026-01-14 09:44:55,160- __main__ - INFO - main.py:13 - 正在启动RAGLite服务器在0.0.0.0:5000
+2026-01-14 09:45:49,319- app - INFO - __init__.py:16 - 初始化数据库...
+2026-01-14 09:45:49,326- app.utils.db - ERROR - db.py:37 - 初始化数据库失败:(pymysql.err.OperationalError) (1049, "Unknown database 'rag'")
+(Background on this error at: https://sqlalche.me/e/20/e3q8)
+2026-01-14 09:45:49,327- app - WARNING - __init__.py:20 - 数据库初始化失败(pymysql.err.OperationalError) (1049, "Unknown database 'rag'")
+(Background on this error at: https://sqlalche.me/e/20/e3q8)
+2026-01-14 09:45:49,328- __main__ - INFO - main.py:13 - 正在启动RAGLite服务器在0.0.0.0:5000
+2026-01-14 09:45:49,351- werkzeug - INFO - _internal.py:97 - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.2.238:5000
+2026-01-14 09:45:49,351- werkzeug - INFO - _internal.py:97 - [33mPress CTRL+C to quit[0m
+2026-01-14 09:46:58,901- app - INFO - __init__.py:16 - 初始化数据库...
+2026-01-14 09:46:58,908- app.utils.db - ERROR - db.py:37 - 初始化数据库失败:(pymysql.err.OperationalError) (1049, "Unknown database 'rag'")
+(Background on this error at: https://sqlalche.me/e/20/e3q8)
+2026-01-14 09:46:58,908- app - WARNING - __init__.py:20 - 数据库初始化失败(pymysql.err.OperationalError) (1049, "Unknown database 'rag'")
+(Background on this error at: https://sqlalche.me/e/20/e3q8)
+2026-01-14 09:46:58,909- __main__ - INFO - main.py:13 - 正在启动RAGLite服务器在0.0.0.0:5000
+2026-01-14 09:46:58,923- werkzeug - INFO - _internal.py:97 - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.2.238:5000
+2026-01-14 09:46:58,923- werkzeug - INFO - _internal.py:97 - [33mPress CTRL+C to quit[0m
+2026-01-14 09:48:19,469- app - INFO - __init__.py:16 - 初始化数据库...
+2026-01-14 09:48:19,474- app.utils.db - ERROR - db.py:37 - 初始化数据库失败:(pymysql.err.OperationalError) (2013, 'Lost connection to MySQL server during query')
+(Background on this error at: https://sqlalche.me/e/20/e3q8)
+2026-01-14 09:48:19,474- app - WARNING - __init__.py:20 - 数据库初始化失败(pymysql.err.OperationalError) (2013, 'Lost connection to MySQL server during query')
+(Background on this error at: https://sqlalche.me/e/20/e3q8)
+2026-01-14 09:48:19,476- __main__ - INFO - main.py:13 - 正在启动RAGLite服务器在0.0.0.0:5000
+2026-01-14 09:48:19,490- werkzeug - INFO - _internal.py:97 - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.2.238:5000
+2026-01-14 09:48:19,491- werkzeug - INFO - _internal.py:97 - [33mPress CTRL+C to quit[0m
+2026-01-14 09:49:51,367- app - INFO - __init__.py:16 - 初始化数据库...
+2026-01-14 09:49:51,555- app - INFO - __init__.py:18 - 初始化数据库成功
+2026-01-14 09:49:51,556- __main__ - INFO - main.py:13 - 正在启动RAGLite服务器在0.0.0.0:5000
+2026-01-14 09:49:51,575- werkzeug - INFO - _internal.py:97 - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.2.238:5000
+2026-01-14 09:49:51,575- werkzeug - INFO - _internal.py:97 - [33mPress CTRL+C to quit[0m
