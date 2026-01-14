@@ -24,17 +24,17 @@ def create_app(config_class=Config):
 
     app = Flask(
         __name__,
-        template_folder=os.path.join(base_dir, "template"),
+        template_folder=os.path.join(base_dir, "templates"),
         static_folder=os.path.join(base_dir, "static"),
     )
+
+    from app.blueprints import auth
+
+    app.register_blueprint(auth.bp)
 
     app.config.from_object(config_class)
 
     # 启用请求支持
     CORS(app)
-
-    @app.route("/")
-    def index():
-        return "rag lite"
 
     return app

@@ -64,3 +64,268 @@
  * Running on http://127.0.0.1:5000
  * Running on http://192.168.2.238:5000
 2026-01-14 09:49:51,575- werkzeug - INFO - _internal.py:97 - [33mPress CTRL+C to quit[0m
+2026-01-14 20:11:10,538- app - INFO - __init__.py:16 - 初始化数据库...
+2026-01-14 20:11:10,560- app - INFO - __init__.py:18 - 初始化数据库成功
+2026-01-14 20:11:10,561- __main__ - INFO - main.py:13 - 正在启动RAGLite服务器在0.0.0.0:5000
+2026-01-14 20:11:10,575- werkzeug - INFO - _internal.py:97 - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.5.149:5000
+2026-01-14 20:11:10,575- werkzeug - INFO - _internal.py:97 - [33mPress CTRL+C to quit[0m
+2026-01-14 20:26:03,343- werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [14/Jan/2026 20:26:03] "GET / HTTP/1.1" 200 -
+2026-01-14 20:26:05,997- werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [14/Jan/2026 20:26:05] "GET / HTTP/1.1" 200 -
+2026-01-14 20:56:31,952- werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [14/Jan/2026 20:56:31] "GET / HTTP/1.1" 200 -
+2026-01-14 21:00:38,845- app - INFO - __init__.py:16 - 初始化数据库...
+2026-01-14 21:00:38,866- app - INFO - __init__.py:18 - 初始化数据库成功
+2026-01-14 21:00:38,868- __main__ - INFO - main.py:13 - 正在启动RAGLite服务器在0.0.0.0:5000
+2026-01-14 21:00:38,887- werkzeug - INFO - _internal.py:97 - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.5.149:5000
+2026-01-14 21:00:38,887- werkzeug - INFO - _internal.py:97 - [33mPress CTRL+C to quit[0m
+2026-01-14 21:00:42,552- app - ERROR - app.py:875 - Exception on / [GET]
+Traceback (most recent call last):
+  File "/Users/rihime/Desktop/study/rag_lite/.venv/lib/python3.11/site-packages/flask/app.py", line 1511, in wsgi_app
+    response = self.full_dispatch_request()
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/rihime/Desktop/study/rag_lite/.venv/lib/python3.11/site-packages/flask/app.py", line 919, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/rihime/Desktop/study/rag_lite/.venv/lib/python3.11/site-packages/flask_cors/extension.py", line 176, in wrapped_function
+    return cors_after_request(app.make_response(f(*args, **kwargs)))
+                                                ^^^^^^^^^^^^^^^^^^
+  File "/Users/rihime/Desktop/study/rag_lite/.venv/lib/python3.11/site-packages/flask/app.py", line 917, in full_dispatch_request
+    rv = self.dispatch_request()
+         ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/rihime/Desktop/study/rag_lite/.venv/lib/python3.11/site-packages/flask/app.py", line 902, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/rihime/Desktop/study/rag_lite/app/blueprints/auth.py", line 18, in home
+    return render_template("home.html")
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/rihime/Desktop/study/rag_lite/.venv/lib/python3.11/site-packages/flask/templating.py", line 149, in render_template
+    template = app.jinja_env.get_or_select_template(template_name_or_list)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/rihime/Desktop/study/rag_lite/.venv/lib/python3.11/site-packages/jinja2/environment.py", line 1087, in get_or_select_template
+    return self.get_template(template_name_or_list, parent, globals)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/rihime/Desktop/study/rag_lite/.venv/lib/python3.11/site-packages/jinja2/environment.py", line 1016, in get_template
+    return self._load_template(name, globals)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/rihime/Desktop/study/rag_lite/.venv/lib/python3.11/site-packages/jinja2/environment.py", line 975, in _load_template
+    template = self.loader.load(self, name, self.make_globals(globals))
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/rihime/Desktop/study/rag_lite/.venv/lib/python3.11/site-packages/jinja2/loaders.py", line 126, in load
+    source, filename, uptodate = self.get_source(environment, name)
+                                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/rihime/Desktop/study/rag_lite/.venv/lib/python3.11/site-packages/flask/templating.py", line 65, in get_source
+    return self._get_source_fast(environment, template)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/rihime/Desktop/study/rag_lite/.venv/lib/python3.11/site-packages/flask/templating.py", line 99, in _get_source_fast
+    raise TemplateNotFound(template)
+jinja2.exceptions.TemplateNotFound: home.html
+2026-01-14 21:00:42,558- werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [14/Jan/2026 21:00:42] "[35m[1mGET / HTTP/1.1[0m" 500 -
+2026-01-14 21:00:50,098- werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [14/Jan/2026 21:00:50] "[33mGET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1[0m" 404 -
+2026-01-14 21:02:37,899- app - ERROR - app.py:875 - Exception on / [GET]
+Traceback (most recent call last):
+  File "/Users/rihime/Desktop/study/rag_lite/.venv/lib/python3.11/site-packages/flask/app.py", line 1511, in wsgi_app
+    response = self.full_dispatch_request()
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/rihime/Desktop/study/rag_lite/.venv/lib/python3.11/site-packages/flask/app.py", line 919, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/rihime/Desktop/study/rag_lite/.venv/lib/python3.11/site-packages/flask_cors/extension.py", line 176, in wrapped_function
+    return cors_after_request(app.make_response(f(*args, **kwargs)))
+                                                ^^^^^^^^^^^^^^^^^^
+  File "/Users/rihime/Desktop/study/rag_lite/.venv/lib/python3.11/site-packages/flask/app.py", line 917, in full_dispatch_request
+    rv = self.dispatch_request()
+         ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/rihime/Desktop/study/rag_lite/.venv/lib/python3.11/site-packages/flask/app.py", line 902, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/rihime/Desktop/study/rag_lite/app/blueprints/auth.py", line 18, in home
+    return render_template("home.html")
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/rihime/Desktop/study/rag_lite/.venv/lib/python3.11/site-packages/flask/templating.py", line 149, in render_template
+    template = app.jinja_env.get_or_select_template(template_name_or_list)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/rihime/Desktop/study/rag_lite/.venv/lib/python3.11/site-packages/jinja2/environment.py", line 1087, in get_or_select_template
+    return self.get_template(template_name_or_list, parent, globals)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/rihime/Desktop/study/rag_lite/.venv/lib/python3.11/site-packages/jinja2/environment.py", line 1016, in get_template
+    return self._load_template(name, globals)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/rihime/Desktop/study/rag_lite/.venv/lib/python3.11/site-packages/jinja2/environment.py", line 975, in _load_template
+    template = self.loader.load(self, name, self.make_globals(globals))
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/rihime/Desktop/study/rag_lite/.venv/lib/python3.11/site-packages/jinja2/loaders.py", line 126, in load
+    source, filename, uptodate = self.get_source(environment, name)
+                                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/rihime/Desktop/study/rag_lite/.venv/lib/python3.11/site-packages/flask/templating.py", line 65, in get_source
+    return self._get_source_fast(environment, template)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/rihime/Desktop/study/rag_lite/.venv/lib/python3.11/site-packages/flask/templating.py", line 99, in _get_source_fast
+    raise TemplateNotFound(template)
+jinja2.exceptions.TemplateNotFound: home.html
+2026-01-14 21:02:37,901- werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [14/Jan/2026 21:02:37] "[35m[1mGET / HTTP/1.1[0m" 500 -
+2026-01-14 21:02:37,912- werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [14/Jan/2026 21:02:37] "[33mGET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1[0m" 404 -
+2026-01-14 21:02:55,135- app - ERROR - app.py:875 - Exception on / [GET]
+Traceback (most recent call last):
+  File "/Users/rihime/Desktop/study/rag_lite/.venv/lib/python3.11/site-packages/flask/app.py", line 1511, in wsgi_app
+    response = self.full_dispatch_request()
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/rihime/Desktop/study/rag_lite/.venv/lib/python3.11/site-packages/flask/app.py", line 919, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/rihime/Desktop/study/rag_lite/.venv/lib/python3.11/site-packages/flask_cors/extension.py", line 176, in wrapped_function
+    return cors_after_request(app.make_response(f(*args, **kwargs)))
+                                                ^^^^^^^^^^^^^^^^^^
+  File "/Users/rihime/Desktop/study/rag_lite/.venv/lib/python3.11/site-packages/flask/app.py", line 917, in full_dispatch_request
+    rv = self.dispatch_request()
+         ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/rihime/Desktop/study/rag_lite/.venv/lib/python3.11/site-packages/flask/app.py", line 902, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/rihime/Desktop/study/rag_lite/app/blueprints/auth.py", line 18, in home
+    return render_template("home.html")
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/rihime/Desktop/study/rag_lite/.venv/lib/python3.11/site-packages/flask/templating.py", line 149, in render_template
+    template = app.jinja_env.get_or_select_template(template_name_or_list)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/rihime/Desktop/study/rag_lite/.venv/lib/python3.11/site-packages/jinja2/environment.py", line 1087, in get_or_select_template
+    return self.get_template(template_name_or_list, parent, globals)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/rihime/Desktop/study/rag_lite/.venv/lib/python3.11/site-packages/jinja2/environment.py", line 1016, in get_template
+    return self._load_template(name, globals)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/rihime/Desktop/study/rag_lite/.venv/lib/python3.11/site-packages/jinja2/environment.py", line 975, in _load_template
+    template = self.loader.load(self, name, self.make_globals(globals))
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/rihime/Desktop/study/rag_lite/.venv/lib/python3.11/site-packages/jinja2/loaders.py", line 126, in load
+    source, filename, uptodate = self.get_source(environment, name)
+                                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/rihime/Desktop/study/rag_lite/.venv/lib/python3.11/site-packages/flask/templating.py", line 65, in get_source
+    return self._get_source_fast(environment, template)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/rihime/Desktop/study/rag_lite/.venv/lib/python3.11/site-packages/flask/templating.py", line 99, in _get_source_fast
+    raise TemplateNotFound(template)
+jinja2.exceptions.TemplateNotFound: home.html
+2026-01-14 21:02:55,137- werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [14/Jan/2026 21:02:55] "[35m[1mGET / HTTP/1.1[0m" 500 -
+2026-01-14 21:02:55,148- werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [14/Jan/2026 21:02:55] "[33mGET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1[0m" 404 -
+2026-01-14 21:03:56,511- app - ERROR - app.py:875 - Exception on / [GET]
+Traceback (most recent call last):
+  File "/Users/rihime/Desktop/study/rag_lite/.venv/lib/python3.11/site-packages/flask/app.py", line 1511, in wsgi_app
+    response = self.full_dispatch_request()
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/rihime/Desktop/study/rag_lite/.venv/lib/python3.11/site-packages/flask/app.py", line 919, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/rihime/Desktop/study/rag_lite/.venv/lib/python3.11/site-packages/flask_cors/extension.py", line 176, in wrapped_function
+    return cors_after_request(app.make_response(f(*args, **kwargs)))
+                                                ^^^^^^^^^^^^^^^^^^
+  File "/Users/rihime/Desktop/study/rag_lite/.venv/lib/python3.11/site-packages/flask/app.py", line 917, in full_dispatch_request
+    rv = self.dispatch_request()
+         ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/rihime/Desktop/study/rag_lite/.venv/lib/python3.11/site-packages/flask/app.py", line 902, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/rihime/Desktop/study/rag_lite/app/blueprints/auth.py", line 18, in home
+    return render_template("home.html")
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/rihime/Desktop/study/rag_lite/.venv/lib/python3.11/site-packages/flask/templating.py", line 149, in render_template
+    template = app.jinja_env.get_or_select_template(template_name_or_list)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/rihime/Desktop/study/rag_lite/.venv/lib/python3.11/site-packages/jinja2/environment.py", line 1087, in get_or_select_template
+    return self.get_template(template_name_or_list, parent, globals)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/rihime/Desktop/study/rag_lite/.venv/lib/python3.11/site-packages/jinja2/environment.py", line 1016, in get_template
+    return self._load_template(name, globals)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/rihime/Desktop/study/rag_lite/.venv/lib/python3.11/site-packages/jinja2/environment.py", line 975, in _load_template
+    template = self.loader.load(self, name, self.make_globals(globals))
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/rihime/Desktop/study/rag_lite/.venv/lib/python3.11/site-packages/jinja2/loaders.py", line 126, in load
+    source, filename, uptodate = self.get_source(environment, name)
+                                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/rihime/Desktop/study/rag_lite/.venv/lib/python3.11/site-packages/flask/templating.py", line 65, in get_source
+    return self._get_source_fast(environment, template)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/rihime/Desktop/study/rag_lite/.venv/lib/python3.11/site-packages/flask/templating.py", line 99, in _get_source_fast
+    raise TemplateNotFound(template)
+jinja2.exceptions.TemplateNotFound: home.html
+2026-01-14 21:03:56,513- werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [14/Jan/2026 21:03:56] "[35m[1mGET / HTTP/1.1[0m" 500 -
+2026-01-14 21:03:56,528- werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [14/Jan/2026 21:03:56] "[33mGET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1[0m" 404 -
+2026-01-14 21:04:39,731- app - INFO - __init__.py:16 - 初始化数据库...
+2026-01-14 21:04:39,749- app - INFO - __init__.py:18 - 初始化数据库成功
+2026-01-14 21:04:39,750- __main__ - INFO - main.py:13 - 正在启动RAGLite服务器在0.0.0.0:5000
+2026-01-14 21:04:39,770- werkzeug - INFO - _internal.py:97 - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.5.149:5000
+2026-01-14 21:04:39,770- werkzeug - INFO - _internal.py:97 - [33mPress CTRL+C to quit[0m
+2026-01-14 21:04:42,584- app - ERROR - app.py:875 - Exception on / [GET]
+Traceback (most recent call last):
+  File "/Users/rihime/Desktop/study/rag_lite/.venv/lib/python3.11/site-packages/flask/app.py", line 1511, in wsgi_app
+    response = self.full_dispatch_request()
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/rihime/Desktop/study/rag_lite/.venv/lib/python3.11/site-packages/flask/app.py", line 919, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/rihime/Desktop/study/rag_lite/.venv/lib/python3.11/site-packages/flask_cors/extension.py", line 176, in wrapped_function
+    return cors_after_request(app.make_response(f(*args, **kwargs)))
+                                                ^^^^^^^^^^^^^^^^^^
+  File "/Users/rihime/Desktop/study/rag_lite/.venv/lib/python3.11/site-packages/flask/app.py", line 917, in full_dispatch_request
+    rv = self.dispatch_request()
+         ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/rihime/Desktop/study/rag_lite/.venv/lib/python3.11/site-packages/flask/app.py", line 902, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/rihime/Desktop/study/rag_lite/app/blueprints/auth.py", line 18, in home
+    return render_template("home.html")
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/rihime/Desktop/study/rag_lite/.venv/lib/python3.11/site-packages/flask/templating.py", line 149, in render_template
+    template = app.jinja_env.get_or_select_template(template_name_or_list)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/rihime/Desktop/study/rag_lite/.venv/lib/python3.11/site-packages/jinja2/environment.py", line 1087, in get_or_select_template
+    return self.get_template(template_name_or_list, parent, globals)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/rihime/Desktop/study/rag_lite/.venv/lib/python3.11/site-packages/jinja2/environment.py", line 1016, in get_template
+    return self._load_template(name, globals)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/rihime/Desktop/study/rag_lite/.venv/lib/python3.11/site-packages/jinja2/environment.py", line 975, in _load_template
+    template = self.loader.load(self, name, self.make_globals(globals))
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/rihime/Desktop/study/rag_lite/.venv/lib/python3.11/site-packages/jinja2/loaders.py", line 126, in load
+    source, filename, uptodate = self.get_source(environment, name)
+                                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/rihime/Desktop/study/rag_lite/.venv/lib/python3.11/site-packages/flask/templating.py", line 65, in get_source
+    return self._get_source_fast(environment, template)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/rihime/Desktop/study/rag_lite/.venv/lib/python3.11/site-packages/flask/templating.py", line 99, in _get_source_fast
+    raise TemplateNotFound(template)
+jinja2.exceptions.TemplateNotFound: home.html
+2026-01-14 21:04:42,591- werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [14/Jan/2026 21:04:42] "[35m[1mGET / HTTP/1.1[0m" 500 -
+2026-01-14 21:04:42,607- werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [14/Jan/2026 21:04:42] "[33mGET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1[0m" 404 -
+2026-01-14 21:09:16,896- app - INFO - __init__.py:16 - 初始化数据库...
+2026-01-14 21:09:16,922- app - INFO - __init__.py:18 - 初始化数据库成功
+2026-01-14 21:09:16,924- __main__ - INFO - main.py:13 - 正在启动RAGLite服务器在0.0.0.0:5000
+2026-01-14 21:09:16,938- werkzeug - INFO - _internal.py:97 - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.5.149:5000
+2026-01-14 21:09:16,938- werkzeug - INFO - _internal.py:97 - [33mPress CTRL+C to quit[0m
+2026-01-14 21:09:21,116- werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [14/Jan/2026 21:09:21] "GET / HTTP/1.1" 200 -
+2026-01-14 21:09:21,130- werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [14/Jan/2026 21:09:21] "[33mGET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1[0m" 404 -
+2026-01-14 21:09:52,534- werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [14/Jan/2026 21:09:52] "GET / HTTP/1.1" 200 -
+2026-01-14 21:10:00,819- app - INFO - __init__.py:16 - 初始化数据库...
+2026-01-14 21:10:00,838- app - INFO - __init__.py:18 - 初始化数据库成功
+2026-01-14 21:10:00,839- __main__ - INFO - main.py:13 - 正在启动RAGLite服务器在0.0.0.0:5000
+2026-01-14 21:10:00,849- werkzeug - INFO - _internal.py:97 - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.5.149:5000
+2026-01-14 21:10:00,849- werkzeug - INFO - _internal.py:97 - [33mPress CTRL+C to quit[0m
+2026-01-14 21:10:03,295- werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [14/Jan/2026 21:10:03] "GET / HTTP/1.1" 200 -
+2026-01-14 21:10:14,267- werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [14/Jan/2026 21:10:14] "[33mGET /kb HTTP/1.1[0m" 404 -
+2026-01-14 21:10:16,933- werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [14/Jan/2026 21:10:16] "[33mGET /chat HTTP/1.1[0m" 404 -
+2026-01-14 21:10:19,649- werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [14/Jan/2026 21:10:19] "GET / HTTP/1.1" 200 -
