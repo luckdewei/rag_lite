@@ -2,6 +2,7 @@ from flask import Flask
 import os
 from app.config import Config
 from flask_cors import CORS
+from app.utils.auth import get_current_user
 from app.utils.logger import get_logger
 
 # 导入初始化数据库的函数
@@ -27,6 +28,11 @@ def create_app(config_class=Config):
         template_folder=os.path.join(base_dir, "templates"),
         static_folder=os.path.join(base_dir, "static"),
     )
+
+    # 注册上下文管理器，使current_user指向当前登录的用户，并且在所有的模板里可用
+    @app.context_processor
+    def inject_user():
+        return dict(current_user=get_current_user())
 
     from app.blueprints import auth
 

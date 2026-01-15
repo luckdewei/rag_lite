@@ -329,3 +329,212 @@ jinja2.exceptions.TemplateNotFound: home.html
 2026-01-14 21:10:14,267- werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [14/Jan/2026 21:10:14] "[33mGET /kb HTTP/1.1[0m" 404 -
 2026-01-14 21:10:16,933- werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [14/Jan/2026 21:10:16] "[33mGET /chat HTTP/1.1[0m" 404 -
 2026-01-14 21:10:19,649- werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [14/Jan/2026 21:10:19] "GET / HTTP/1.1" 200 -
+2026-01-15 10:18:30,102- app - INFO - __init__.py:16 - 初始化数据库...
+2026-01-15 10:18:30,121- app.utils.db - ERROR - db.py:78 - 初始化数据库失败:(pymysql.err.OperationalError) (2003, "Can't connect to MySQL server on 'localhost' ([Errno 61] Connection refused)")
+(Background on this error at: https://sqlalche.me/e/20/e3q8)
+2026-01-15 10:18:30,121- app - WARNING - __init__.py:20 - 数据库初始化失败(pymysql.err.OperationalError) (2003, "Can't connect to MySQL server on 'localhost' ([Errno 61] Connection refused)")
+(Background on this error at: https://sqlalche.me/e/20/e3q8)
+2026-01-15 10:18:30,128- __main__ - INFO - main.py:13 - 正在启动RAGLite服务器在0.0.0.0:5000
+2026-01-15 10:18:30,203- werkzeug - INFO - _internal.py:97 - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.2.238:5000
+2026-01-15 10:18:30,203- werkzeug - INFO - _internal.py:97 - [33mPress CTRL+C to quit[0m
+2026-01-15 10:19:22,817- app - INFO - __init__.py:16 - 初始化数据库...
+2026-01-15 10:19:22,885- app - INFO - __init__.py:18 - 初始化数据库成功
+2026-01-15 10:19:22,888- __main__ - INFO - main.py:13 - 正在启动RAGLite服务器在0.0.0.0:5000
+2026-01-15 10:19:22,905- werkzeug - INFO - _internal.py:97 - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.2.238:5000
+2026-01-15 10:19:22,906- werkzeug - INFO - _internal.py:97 - [33mPress CTRL+C to quit[0m
+2026-01-15 10:19:28,080- werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [15/Jan/2026 10:19:28] "GET / HTTP/1.1" 200 -
+2026-01-15 10:19:29,086- werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [15/Jan/2026 10:19:29] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+2026-01-15 10:19:42,559- werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [15/Jan/2026 10:19:42] "GET / HTTP/1.1" 200 -
+2026-01-15 10:19:43,705- werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [15/Jan/2026 10:19:43] "GET / HTTP/1.1" 200 -
+2026-01-15 11:03:37,520- werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [15/Jan/2026 11:03:37] "[33mGET /register HTTP/1.1[0m" 404 -
+2026-01-15 11:03:52,134- app - INFO - __init__.py:16 - 初始化数据库...
+2026-01-15 11:03:52,161- app - INFO - __init__.py:18 - 初始化数据库成功
+2026-01-15 11:03:52,169- __main__ - INFO - main.py:13 - 正在启动RAGLite服务器在0.0.0.0:5000
+2026-01-15 11:03:52,184- werkzeug - INFO - _internal.py:97 - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.2.238:5000
+2026-01-15 11:03:52,184- werkzeug - INFO - _internal.py:97 - [33mPress CTRL+C to quit[0m
+2026-01-15 11:03:55,070- werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [15/Jan/2026 11:03:55] "GET /register HTTP/1.1" 200 -
+2026-01-15 11:06:34,088- werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [15/Jan/2026 11:06:34] "GET / HTTP/1.1" 200 -
+2026-01-15 14:36:39,566- werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [15/Jan/2026 14:36:39] "GET /register HTTP/1.1" 200 -
+2026-01-15 14:36:42,129- werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [15/Jan/2026 14:36:42] "[33mGET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1[0m" 404 -
+2026-01-15 14:36:59,777- UserService - INFO - user_service.py:40 - 用户luckwei注册成功
+2026-01-15 14:36:59,798- werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [15/Jan/2026 14:36:59] "[32mPOST /register HTTP/1.1[0m" 302 -
+2026-01-15 14:36:59,808- werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [15/Jan/2026 14:36:59] "GET / HTTP/1.1" 200 -
+2026-01-15 14:36:59,898- werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [15/Jan/2026 14:36:59] "[33mGET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1[0m" 404 -
+2026-01-15 14:48:02,259- werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [15/Jan/2026 14:48:02] "[33mGET /kb HTTP/1.1[0m" 404 -
+2026-01-15 14:48:02,331- werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [15/Jan/2026 14:48:02] "[33mGET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1[0m" 404 -
+2026-01-15 14:48:04,037- werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [15/Jan/2026 14:48:04] "[33mGET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1[0m" 404 -
+2026-01-15 14:48:04,086- werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [15/Jan/2026 14:48:04] "[33mGET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1[0m" 404 -
+2026-01-15 15:07:40,624- werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [15/Jan/2026 15:07:40] "GET / HTTP/1.1" 200 -
+2026-01-15 15:07:40,699- werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [15/Jan/2026 15:07:40] "[33mGET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1[0m" 404 -
+2026-01-15 15:07:43,498- werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [15/Jan/2026 15:07:43] "GET / HTTP/1.1" 200 -
+2026-01-15 15:07:43,592- werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [15/Jan/2026 15:07:43] "[33mGET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1[0m" 404 -
+2026-01-15 15:07:47,958- werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [15/Jan/2026 15:07:47] "[33mGET /login HTTP/1.1[0m" 404 -
+2026-01-15 15:07:47,997- werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [15/Jan/2026 15:07:47] "[33mGET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1[0m" 404 -
+2026-01-15 15:08:28,804- app - INFO - __init__.py:16 - 初始化数据库...
+2026-01-15 15:08:28,827- app - INFO - __init__.py:18 - 初始化数据库成功
+2026-01-15 15:08:28,834- __main__ - INFO - main.py:13 - 正在启动RAGLite服务器在0.0.0.0:5000
+2026-01-15 15:08:28,857- werkzeug - INFO - _internal.py:97 - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.2.238:5000
+2026-01-15 15:08:28,857- werkzeug - INFO - _internal.py:97 - [33mPress CTRL+C to quit[0m
+2026-01-15 15:08:31,444- app - ERROR - app.py:875 - Exception on /login [GET]
+Traceback (most recent call last):
+  File "/Users/weiwenhao/Desktop/study/rag_lite/.venv/lib/python3.11/site-packages/flask/app.py", line 1511, in wsgi_app
+    response = self.full_dispatch_request()
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/weiwenhao/Desktop/study/rag_lite/.venv/lib/python3.11/site-packages/flask/app.py", line 919, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/weiwenhao/Desktop/study/rag_lite/.venv/lib/python3.11/site-packages/flask_cors/extension.py", line 176, in wrapped_function
+    return cors_after_request(app.make_response(f(*args, **kwargs)))
+                                                ^^^^^^^^^^^^^^^^^^
+  File "/Users/weiwenhao/Desktop/study/rag_lite/.venv/lib/python3.11/site-packages/flask/app.py", line 917, in full_dispatch_request
+    rv = self.dispatch_request()
+         ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/weiwenhao/Desktop/study/rag_lite/.venv/lib/python3.11/site-packages/flask/app.py", line 902, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/weiwenhao/Desktop/study/rag_lite/app/blueprints/auth.py", line 49, in login
+    username = request.form.get("username").strip()
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: 'NoneType' object has no attribute 'strip'
+2026-01-15 15:08:31,451- werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [15/Jan/2026 15:08:31] "[35m[1mGET /login HTTP/1.1[0m" 500 -
+2026-01-15 15:08:31,504- werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [15/Jan/2026 15:08:31] "[33mGET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1[0m" 404 -
+2026-01-15 15:08:33,288- app - ERROR - app.py:875 - Exception on /login [GET]
+Traceback (most recent call last):
+  File "/Users/weiwenhao/Desktop/study/rag_lite/.venv/lib/python3.11/site-packages/flask/app.py", line 1511, in wsgi_app
+    response = self.full_dispatch_request()
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/weiwenhao/Desktop/study/rag_lite/.venv/lib/python3.11/site-packages/flask/app.py", line 919, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/weiwenhao/Desktop/study/rag_lite/.venv/lib/python3.11/site-packages/flask_cors/extension.py", line 176, in wrapped_function
+    return cors_after_request(app.make_response(f(*args, **kwargs)))
+                                                ^^^^^^^^^^^^^^^^^^
+  File "/Users/weiwenhao/Desktop/study/rag_lite/.venv/lib/python3.11/site-packages/flask/app.py", line 917, in full_dispatch_request
+    rv = self.dispatch_request()
+         ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/weiwenhao/Desktop/study/rag_lite/.venv/lib/python3.11/site-packages/flask/app.py", line 902, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/weiwenhao/Desktop/study/rag_lite/app/blueprints/auth.py", line 49, in login
+    username = request.form.get("username").strip()
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: 'NoneType' object has no attribute 'strip'
+2026-01-15 15:08:33,291- werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [15/Jan/2026 15:08:33] "[35m[1mGET /login HTTP/1.1[0m" 500 -
+2026-01-15 15:08:33,367- werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [15/Jan/2026 15:08:33] "[33mGET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1[0m" 404 -
+2026-01-15 15:10:01,482- app - ERROR - app.py:875 - Exception on /login [GET]
+Traceback (most recent call last):
+  File "/Users/weiwenhao/Desktop/study/rag_lite/.venv/lib/python3.11/site-packages/flask/app.py", line 1511, in wsgi_app
+    response = self.full_dispatch_request()
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/weiwenhao/Desktop/study/rag_lite/.venv/lib/python3.11/site-packages/flask/app.py", line 919, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/weiwenhao/Desktop/study/rag_lite/.venv/lib/python3.11/site-packages/flask_cors/extension.py", line 176, in wrapped_function
+    return cors_after_request(app.make_response(f(*args, **kwargs)))
+                                                ^^^^^^^^^^^^^^^^^^
+  File "/Users/weiwenhao/Desktop/study/rag_lite/.venv/lib/python3.11/site-packages/flask/app.py", line 917, in full_dispatch_request
+    rv = self.dispatch_request()
+         ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/weiwenhao/Desktop/study/rag_lite/.venv/lib/python3.11/site-packages/flask/app.py", line 902, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/weiwenhao/Desktop/study/rag_lite/app/blueprints/auth.py", line 49, in login
+    if request.method == "POST":
+               ^^^^^^^^^^^^^^^^^^
+AttributeError: 'NoneType' object has no attribute 'strip'
+2026-01-15 15:10:01,484- werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [15/Jan/2026 15:10:01] "[35m[1mGET /login HTTP/1.1[0m" 500 -
+2026-01-15 15:10:01,573- werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [15/Jan/2026 15:10:01] "[33mGET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1[0m" 404 -
+2026-01-15 15:10:22,046- app - INFO - __init__.py:16 - 初始化数据库...
+2026-01-15 15:10:22,071- app - INFO - __init__.py:18 - 初始化数据库成功
+2026-01-15 15:10:22,080- __main__ - INFO - main.py:13 - 正在启动RAGLite服务器在0.0.0.0:5000
+2026-01-15 15:10:22,095- werkzeug - INFO - _internal.py:97 - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.2.238:5000
+2026-01-15 15:10:22,095- werkzeug - INFO - _internal.py:97 - [33mPress CTRL+C to quit[0m
+2026-01-15 15:10:26,388- app - ERROR - app.py:875 - Exception on /login [GET]
+Traceback (most recent call last):
+  File "/Users/weiwenhao/Desktop/study/rag_lite/.venv/lib/python3.11/site-packages/flask/app.py", line 1511, in wsgi_app
+    response = self.full_dispatch_request()
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/weiwenhao/Desktop/study/rag_lite/.venv/lib/python3.11/site-packages/flask/app.py", line 919, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/weiwenhao/Desktop/study/rag_lite/.venv/lib/python3.11/site-packages/flask_cors/extension.py", line 176, in wrapped_function
+    return cors_after_request(app.make_response(f(*args, **kwargs)))
+                                                ^^^^^^^^^^^^^^^^^^
+  File "/Users/weiwenhao/Desktop/study/rag_lite/.venv/lib/python3.11/site-packages/flask/app.py", line 917, in full_dispatch_request
+    rv = self.dispatch_request()
+         ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/weiwenhao/Desktop/study/rag_lite/.venv/lib/python3.11/site-packages/flask/app.py", line 902, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/weiwenhao/Desktop/study/rag_lite/app/blueprints/auth.py", line 70, in login
+    return render_template("login.html", next_url=next_url)
+                                                  ^^^^^^^^
+UnboundLocalError: cannot access local variable 'next_url' where it is not associated with a value
+2026-01-15 15:10:26,398- werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [15/Jan/2026 15:10:26] "[35m[1mGET /login HTTP/1.1[0m" 500 -
+2026-01-15 15:10:26,438- werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [15/Jan/2026 15:10:26] "[33mGET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1[0m" 404 -
+2026-01-15 15:11:03,384- app - ERROR - app.py:875 - Exception on /login [GET]
+Traceback (most recent call last):
+  File "/Users/weiwenhao/Desktop/study/rag_lite/.venv/lib/python3.11/site-packages/flask/app.py", line 1511, in wsgi_app
+    response = self.full_dispatch_request()
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/weiwenhao/Desktop/study/rag_lite/.venv/lib/python3.11/site-packages/flask/app.py", line 919, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/weiwenhao/Desktop/study/rag_lite/.venv/lib/python3.11/site-packages/flask_cors/extension.py", line 176, in wrapped_function
+    return cors_after_request(app.make_response(f(*args, **kwargs)))
+                                                ^^^^^^^^^^^^^^^^^^
+  File "/Users/weiwenhao/Desktop/study/rag_lite/.venv/lib/python3.11/site-packages/flask/app.py", line 917, in full_dispatch_request
+    rv = self.dispatch_request()
+         ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/weiwenhao/Desktop/study/rag_lite/.venv/lib/python3.11/site-packages/flask/app.py", line 902, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/weiwenhao/Desktop/study/rag_lite/app/blueprints/auth.py", line 70, in login
+    return render_template("login.html", next_url=next_url)
+                                                  ^^^^^^^^
+UnboundLocalError: cannot access local variable 'next_url' where it is not associated with a value
+2026-01-15 15:11:03,386- werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [15/Jan/2026 15:11:03] "[35m[1mGET /login HTTP/1.1[0m" 500 -
+2026-01-15 15:11:03,431- werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [15/Jan/2026 15:11:03] "[33mGET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1[0m" 404 -
+2026-01-15 15:11:07,466- app - INFO - __init__.py:16 - 初始化数据库...
+2026-01-15 15:11:07,489- app - INFO - __init__.py:18 - 初始化数据库成功
+2026-01-15 15:11:07,497- __main__ - INFO - main.py:13 - 正在启动RAGLite服务器在0.0.0.0:5000
+2026-01-15 15:11:07,512- werkzeug - INFO - _internal.py:97 - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.2.238:5000
+2026-01-15 15:11:07,512- werkzeug - INFO - _internal.py:97 - [33mPress CTRL+C to quit[0m
+2026-01-15 15:11:11,762- werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [15/Jan/2026 15:11:11] "GET /login HTTP/1.1" 200 -
+2026-01-15 15:11:11,795- werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [15/Jan/2026 15:11:11] "[33mGET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1[0m" 404 -
+2026-01-15 15:11:52,397- UserService - INFO - user_service.py:57 - 用户luckwei登录成功
+2026-01-15 15:11:52,402- werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [15/Jan/2026 15:11:52] "[32mPOST /login HTTP/1.1[0m" 302 -
+2026-01-15 15:11:52,420- werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [15/Jan/2026 15:11:52] "GET / HTTP/1.1" 200 -
+2026-01-15 15:11:52,498- werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [15/Jan/2026 15:11:52] "[33mGET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1[0m" 404 -
+2026-01-15 16:17:53,065- werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [15/Jan/2026 16:17:53] "GET / HTTP/1.1" 200 -
+2026-01-15 16:17:53,212- werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [15/Jan/2026 16:17:53] "[33mGET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1[0m" 404 -
+2026-01-15 16:17:58,285- werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [15/Jan/2026 16:17:58] "GET / HTTP/1.1" 200 -
+2026-01-15 16:17:58,403- werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [15/Jan/2026 16:17:58] "[33mGET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1[0m" 404 -
+2026-01-15 16:18:04,072- app - INFO - __init__.py:17 - 初始化数据库...
+2026-01-15 16:18:04,102- app - INFO - __init__.py:19 - 初始化数据库成功
+2026-01-15 16:18:04,106- __main__ - INFO - main.py:13 - 正在启动RAGLite服务器在0.0.0.0:5000
+2026-01-15 16:18:05,061- werkzeug - INFO - _internal.py:97 - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.2.238:5000
+2026-01-15 16:18:05,062- werkzeug - INFO - _internal.py:97 - [33mPress CTRL+C to quit[0m
+2026-01-15 16:18:07,520- werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [15/Jan/2026 16:18:07] "GET / HTTP/1.1" 200 -
+2026-01-15 16:18:07,604- werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [15/Jan/2026 16:18:07] "[33mGET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1[0m" 404 -
