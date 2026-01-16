@@ -55,6 +55,7 @@ def login():
             user = user_service.login(username, password)
             # 登录成功够，把用户ID放在会话对象里
             session["user_id"] = user["id"]
+            # session["user_name"] = user["name"]
             # 设置会话为永久有效，默认31天
             session.permanent = True
             flash("登录成功", "success")

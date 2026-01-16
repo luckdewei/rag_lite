@@ -538,3 +538,208 @@ UnboundLocalError: cannot access local variable 'next_url' where it is not assoc
 2026-01-15 16:18:05,062- werkzeug - INFO - _internal.py:97 - [33mPress CTRL+C to quit[0m
 2026-01-15 16:18:07,520- werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [15/Jan/2026 16:18:07] "GET / HTTP/1.1" 200 -
 2026-01-15 16:18:07,604- werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [15/Jan/2026 16:18:07] "[33mGET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1[0m" 404 -
+2026-01-16 10:41:08,297- app - INFO - __init__.py:17 - 初始化数据库...
+2026-01-16 10:41:08,347- app - INFO - __init__.py:19 - 初始化数据库成功
+2026-01-16 10:41:08,353- __main__ - INFO - main.py:13 - 正在启动RAGLite服务器在0.0.0.0:5000
+2026-01-16 10:41:09,162- werkzeug - INFO - _internal.py:97 - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.2.238:5000
+2026-01-16 10:41:09,163- werkzeug - INFO - _internal.py:97 - [33mPress CTRL+C to quit[0m
+2026-01-16 10:41:13,387- werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [16/Jan/2026 10:41:13] "GET /login HTTP/1.1" 200 -
+2026-01-16 10:41:24,112- werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [16/Jan/2026 10:41:24] "GET / HTTP/1.1" 200 -
+2026-01-16 10:41:30,691- werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [16/Jan/2026 10:41:30] "[33mGET /chat HTTP/1.1[0m" 404 -
+2026-01-16 15:51:38,550- werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [16/Jan/2026 15:51:38] "GET / HTTP/1.1" 200 -
+2026-01-16 15:51:41,591- werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [16/Jan/2026 15:51:41] "[33mGET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1[0m" 404 -
+2026-01-16 15:51:45,220- werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [16/Jan/2026 15:51:45] "GET / HTTP/1.1" 200 -
+2026-01-16 15:51:45,276- werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [16/Jan/2026 15:51:45] "[33mGET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1[0m" 404 -
+2026-01-16 15:56:37,397- werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [16/Jan/2026 15:56:37] "GET / HTTP/1.1" 200 -
+2026-01-16 15:56:37,454- werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [16/Jan/2026 15:56:37] "[33mGET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1[0m" 404 -
+2026-01-16 15:56:52,632- app - INFO - __init__.py:17 - 初始化数据库...
+2026-01-16 15:56:52,656- app - INFO - __init__.py:19 - 初始化数据库成功
+2026-01-16 15:56:52,663- __main__ - INFO - main.py:13 - 正在启动RAGLite服务器在0.0.0.0:5000
+2026-01-16 15:56:52,687- werkzeug - INFO - _internal.py:97 - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.2.238:5000
+2026-01-16 15:56:52,687- werkzeug - INFO - _internal.py:97 - [33mPress CTRL+C to quit[0m
+2026-01-16 15:57:09,215- werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [16/Jan/2026 15:57:09] "GET / HTTP/1.1" 200 -
+2026-01-16 15:57:09,254- werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [16/Jan/2026 15:57:09] "[33mGET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1[0m" 404 -
+2026-01-16 15:57:13,439- werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [16/Jan/2026 15:57:13] "[33mGET /settings HTTP/1.1[0m" 404 -
+2026-01-16 15:57:13,496- werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [16/Jan/2026 15:57:13] "[33mGET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1[0m" 404 -
+2026-01-16 15:57:15,097- werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [16/Jan/2026 15:57:15] "[33mGET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1[0m" 404 -
+2026-01-16 15:57:15,129- werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [16/Jan/2026 15:57:15] "[33mGET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1[0m" 404 -
+2026-01-16 16:00:28,505- werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [16/Jan/2026 16:00:28] "[32mGET /logout HTTP/1.1[0m" 302 -
+2026-01-16 16:00:28,524- werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [16/Jan/2026 16:00:28] "GET / HTTP/1.1" 200 -
+2026-01-16 16:00:28,581- werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [16/Jan/2026 16:00:28] "[33mGET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1[0m" 404 -
+2026-01-16 16:00:31,285- werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [16/Jan/2026 16:00:31] "GET / HTTP/1.1" 200 -
+2026-01-16 16:00:31,330- werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [16/Jan/2026 16:00:31] "[33mGET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1[0m" 404 -
+2026-01-16 16:00:33,947- werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [16/Jan/2026 16:00:33] "GET / HTTP/1.1" 200 -
+2026-01-16 16:00:33,988- werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [16/Jan/2026 16:00:33] "[33mGET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1[0m" 404 -
+2026-01-16 16:00:36,433- werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [16/Jan/2026 16:00:36] "GET / HTTP/1.1" 200 -
+2026-01-16 16:00:36,488- werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [16/Jan/2026 16:00:36] "[33mGET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1[0m" 404 -
+2026-01-16 16:00:38,678- werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [16/Jan/2026 16:00:38] "GET / HTTP/1.1" 200 -
+2026-01-16 16:00:38,731- werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [16/Jan/2026 16:00:38] "[33mGET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1[0m" 404 -
+2026-01-16 16:00:39,604- werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [16/Jan/2026 16:00:39] "GET / HTTP/1.1" 200 -
+2026-01-16 16:00:39,649- werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [16/Jan/2026 16:00:39] "[33mGET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1[0m" 404 -
+2026-01-16 16:00:45,289- werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [16/Jan/2026 16:00:45] "GET / HTTP/1.1" 200 -
+2026-01-16 16:00:45,337- werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [16/Jan/2026 16:00:45] "[33mGET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1[0m" 404 -
+2026-01-16 16:00:57,509- werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [16/Jan/2026 16:00:57] "GET / HTTP/1.1" 200 -
+2026-01-16 16:00:57,570- werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [16/Jan/2026 16:00:57] "[33mGET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1[0m" 404 -
+2026-01-16 16:01:00,100- werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [16/Jan/2026 16:01:00] "GET / HTTP/1.1" 200 -
+2026-01-16 16:01:00,142- werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [16/Jan/2026 16:01:00] "[33mGET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1[0m" 404 -
+2026-01-16 16:01:13,805- app - INFO - __init__.py:17 - 初始化数据库...
+2026-01-16 16:01:13,895- app - INFO - __init__.py:19 - 初始化数据库成功
+2026-01-16 16:01:13,898- __main__ - INFO - main.py:13 - 正在启动RAGLite服务器在0.0.0.0:5000
+2026-01-16 16:01:13,914- werkzeug - INFO - _internal.py:97 - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.2.238:5000
+2026-01-16 16:01:13,914- werkzeug - INFO - _internal.py:97 - [33mPress CTRL+C to quit[0m
+2026-01-16 16:01:16,936- werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [16/Jan/2026 16:01:16] "GET / HTTP/1.1" 200 -
+2026-01-16 16:01:16,985- werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [16/Jan/2026 16:01:16] "[33mGET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1[0m" 404 -
+2026-01-16 16:01:19,938- werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [16/Jan/2026 16:01:19] "GET / HTTP/1.1" 200 -
+2026-01-16 16:01:19,979- werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [16/Jan/2026 16:01:19] "[33mGET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1[0m" 404 -
+2026-01-16 16:01:33,214- werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [16/Jan/2026 16:01:33] "GET / HTTP/1.1" 200 -
+2026-01-16 16:01:33,277- werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [16/Jan/2026 16:01:33] "[33mGET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1[0m" 404 -
+2026-01-16 16:01:35,856- werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [16/Jan/2026 16:01:35] "GET / HTTP/1.1" 200 -
+2026-01-16 16:01:35,890- werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [16/Jan/2026 16:01:35] "[33mGET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1[0m" 404 -
+2026-01-16 16:02:04,857- app - INFO - __init__.py:17 - 初始化数据库...
+2026-01-16 16:02:04,884- app - INFO - __init__.py:19 - 初始化数据库成功
+2026-01-16 16:02:04,888- __main__ - INFO - main.py:13 - 正在启动RAGLite服务器在0.0.0.0:5000
+2026-01-16 16:02:04,902- werkzeug - INFO - _internal.py:97 - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.2.238:5000
+2026-01-16 16:02:04,902- werkzeug - INFO - _internal.py:97 - [33mPress CTRL+C to quit[0m
+2026-01-16 16:02:07,422- werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [16/Jan/2026 16:02:07] "GET / HTTP/1.1" 200 -
+2026-01-16 16:02:07,463- werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [16/Jan/2026 16:02:07] "[33mGET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1[0m" 404 -
+2026-01-16 16:02:09,491- werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [16/Jan/2026 16:02:09] "GET /login HTTP/1.1" 200 -
+2026-01-16 16:02:09,528- werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [16/Jan/2026 16:02:09] "[33mGET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1[0m" 404 -
+2026-01-16 16:02:17,421- UserService - INFO - user_service.py:57 - 用户luckwei登录成功
+2026-01-16 16:02:17,424- app.blueprints.auth - ERROR - auth.py:67 - 登录失败:'name'
+2026-01-16 16:02:17,435- werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [16/Jan/2026 16:02:17] "POST /login HTTP/1.1" 200 -
+2026-01-16 16:02:17,482- werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [16/Jan/2026 16:02:17] "[33mGET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1[0m" 404 -
+2026-01-16 16:02:28,792- UserService - INFO - user_service.py:57 - 用户luckwei登录成功
+2026-01-16 16:02:28,796- app.blueprints.auth - ERROR - auth.py:67 - 登录失败:'name'
+2026-01-16 16:02:28,808- werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [16/Jan/2026 16:02:28] "POST /login HTTP/1.1" 200 -
+2026-01-16 16:02:28,865- werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [16/Jan/2026 16:02:28] "[33mGET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1[0m" 404 -
+2026-01-16 16:02:40,473- UserService - INFO - user_service.py:57 - 用户luckwei登录成功
+2026-01-16 16:02:40,476- app.blueprints.auth - ERROR - auth.py:67 - 登录失败:'name'
+2026-01-16 16:02:40,490- werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [16/Jan/2026 16:02:40] "POST /login HTTP/1.1" 200 -
+2026-01-16 16:02:40,527- werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [16/Jan/2026 16:02:40] "[33mGET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1[0m" 404 -
+2026-01-16 16:03:06,114- app - INFO - __init__.py:17 - 初始化数据库...
+2026-01-16 16:03:06,143- app - INFO - __init__.py:19 - 初始化数据库成功
+2026-01-16 16:03:06,148- __main__ - INFO - main.py:13 - 正在启动RAGLite服务器在0.0.0.0:5000
+2026-01-16 16:03:06,162- werkzeug - INFO - _internal.py:97 - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.2.238:5000
+2026-01-16 16:03:06,162- werkzeug - INFO - _internal.py:97 - [33mPress CTRL+C to quit[0m
+2026-01-16 16:03:09,699- UserService - INFO - user_service.py:57 - 用户luckwei登录成功
+2026-01-16 16:03:09,704- werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [16/Jan/2026 16:03:09] "[32mPOST /login HTTP/1.1[0m" 302 -
+2026-01-16 16:03:09,737- werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [16/Jan/2026 16:03:09] "GET / HTTP/1.1" 200 -
+2026-01-16 16:03:09,782- werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [16/Jan/2026 16:03:09] "[33mGET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1[0m" 404 -
+2026-01-16 17:40:43,989- app - INFO - __init__.py:17 - 初始化数据库...
+2026-01-16 17:40:44,016- app - INFO - __init__.py:19 - 初始化数据库成功
+2026-01-16 17:40:44,019- __main__ - INFO - main.py:13 - 正在启动RAGLite服务器在0.0.0.0:5000
+2026-01-16 17:40:44,032- werkzeug - INFO - _internal.py:97 - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.2.238:5000
+2026-01-16 17:40:44,033- werkzeug - INFO - _internal.py:97 - [33mPress CTRL+C to quit[0m
+2026-01-16 17:42:05,568- werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [16/Jan/2026 17:42:05] "GET / HTTP/1.1" 200 -
+2026-01-16 17:42:05,645- werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [16/Jan/2026 17:42:05] "[33mGET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1[0m" 404 -
+2026-01-16 17:42:07,465- werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [16/Jan/2026 17:42:07] "[33mGET /kb HTTP/1.1[0m" 404 -
+2026-01-16 17:42:07,512- werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [16/Jan/2026 17:42:07] "[33mGET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1[0m" 404 -
+2026-01-16 17:43:35,654- app - INFO - __init__.py:17 - 初始化数据库...
+2026-01-16 17:43:35,679- app - INFO - __init__.py:19 - 初始化数据库成功
+2026-01-16 17:43:40,495- app.services.storage.local_storage - INFO - local_storage.py:20 - 本地存储初始化成功：目录：/Users/weiwenhao/Desktop/study/rag_lite/storages
+2026-01-16 17:43:40,498- __main__ - INFO - main.py:13 - 正在启动RAGLite服务器在0.0.0.0:5000
+2026-01-16 17:43:40,516- werkzeug - INFO - _internal.py:97 - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.2.238:5000
+2026-01-16 17:43:40,516- werkzeug - INFO - _internal.py:97 - [33mPress CTRL+C to quit[0m
+2026-01-16 17:43:41,637- werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [16/Jan/2026 17:43:41] "[33mGET /kb HTTP/1.1[0m" 404 -
+2026-01-16 17:43:41,723- werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [16/Jan/2026 17:43:41] "[33mGET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1[0m" 404 -
+2026-01-16 17:43:43,453- werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [16/Jan/2026 17:43:43] "[33mGET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1[0m" 404 -
+2026-01-16 17:43:43,494- werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [16/Jan/2026 17:43:43] "[33mGET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1[0m" 404 -
+2026-01-16 17:43:44,622- werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [16/Jan/2026 17:43:44] "[33mGET /kb HTTP/1.1[0m" 404 -
+2026-01-16 17:43:44,667- werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [16/Jan/2026 17:43:44] "[33mGET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1[0m" 404 -
+2026-01-16 17:45:02,335- app - INFO - __init__.py:17 - 初始化数据库...
+2026-01-16 17:45:02,358- app - INFO - __init__.py:19 - 初始化数据库成功
+2026-01-16 17:45:02,598- app.services.storage.local_storage - INFO - local_storage.py:20 - 本地存储初始化成功：目录：/Users/weiwenhao/Desktop/study/rag_lite/storages
+2026-01-16 17:45:02,602- __main__ - INFO - main.py:13 - 正在启动RAGLite服务器在0.0.0.0:5000
+2026-01-16 17:45:02,619- werkzeug - INFO - _internal.py:97 - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.2.238:5000
+2026-01-16 17:45:02,619- werkzeug - INFO - _internal.py:97 - [33mPress CTRL+C to quit[0m
+2026-01-16 17:45:08,492- werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [16/Jan/2026 17:45:08] "GET /kb HTTP/1.1" 200 -
+2026-01-16 17:45:08,527- werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [16/Jan/2026 17:45:08] "[33mGET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1[0m" 404 -
+2026-01-16 17:45:21,357- werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [16/Jan/2026 17:45:21] "GET /kb?search=&sort_by=created_at&sort_order=desc&page=1&page_size=10 HTTP/1.1" 200 -
+2026-01-16 17:45:21,407- werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [16/Jan/2026 17:45:21] "[33mGET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1[0m" 404 -
+2026-01-16 17:45:31,249- werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [16/Jan/2026 17:45:31] "GET /kb?search=&sort_by=created_at&sort_order=desc&page=1&page_size=10 HTTP/1.1" 200 -
+2026-01-16 17:45:31,289- werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [16/Jan/2026 17:45:31] "[33mGET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1[0m" 404 -
+2026-01-16 17:46:31,269- app.blueprints.knowledgebase - INFO - knowledgebase.py:53 - 收到新的知识库的封面图片：文件名:Snipaste_2025-12-18_22-04-43.png,大小:141807,内容类型:image/png
+2026-01-16 17:46:31,270- app.blueprints.utils - WARNING - utils.py:29 - ValueError in api_create:type object 'Config' has no attribute 'ALLOWED_IMAGE_EXTENSIONS'
+2026-01-16 17:46:31,271- werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [16/Jan/2026 17:46:31] "[35m[1mPOST /api/v1/kb HTTP/1.1[0m" 500 -
+2026-01-16 17:47:59,613- app.blueprints.knowledgebase - INFO - knowledgebase.py:53 - 收到新的知识库的封面图片：文件名:Snipaste_2026-01-06_11-12-51.png,大小:277180,内容类型:image/png
+2026-01-16 17:47:59,614- app.blueprints.utils - WARNING - utils.py:29 - ValueError in api_create:type object 'Config' has no attribute 'ALLOWED_IMAGE_EXTENSIONS'
+2026-01-16 17:47:59,615- werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [16/Jan/2026 17:47:59] "[35m[1mPOST /api/v1/kb HTTP/1.1[0m" 500 -
+2026-01-16 17:51:20,820- app.blueprints.knowledgebase - INFO - knowledgebase.py:53 - 收到新的知识库的封面图片：文件名:Snipaste_2026-01-06_11-12-51.png,大小:277180,内容类型:image/png
+2026-01-16 17:51:20,821- app.blueprints.utils - WARNING - utils.py:29 - ValueError in api_create:type object 'Config' has no attribute 'ALLOWED_IMAGE_EXTENSIONS'
+2026-01-16 17:51:20,821- werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [16/Jan/2026 17:51:20] "[35m[1mPOST /api/v1/kb HTTP/1.1[0m" 500 -
+2026-01-16 17:51:25,559- app - INFO - __init__.py:17 - 初始化数据库...
+2026-01-16 17:51:25,583- app - INFO - __init__.py:19 - 初始化数据库成功
+2026-01-16 17:51:25,821- app.services.storage.local_storage - INFO - local_storage.py:20 - 本地存储初始化成功：目录：/Users/weiwenhao/Desktop/study/rag_lite/storages
+2026-01-16 17:51:25,825- __main__ - INFO - main.py:13 - 正在启动RAGLite服务器在0.0.0.0:5000
+2026-01-16 17:51:25,842- werkzeug - INFO - _internal.py:97 - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.2.238:5000
+2026-01-16 17:51:25,842- werkzeug - INFO - _internal.py:97 - [33mPress CTRL+C to quit[0m
+2026-01-16 17:51:29,481- werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [16/Jan/2026 17:51:29] "GET /kb?search=&sort_by=created_at&sort_order=desc&page=1&page_size=10 HTTP/1.1" 200 -
+2026-01-16 17:51:29,527- werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [16/Jan/2026 17:51:29] "[33mGET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1[0m" 404 -
+2026-01-16 17:51:42,588- app.blueprints.knowledgebase - INFO - knowledgebase.py:53 - 收到新的知识库的封面图片：文件名:Snipaste_2026-01-06_11-12-51.png,大小:277180,内容类型:image/png
+2026-01-16 17:51:42,609- KnowledgebaseService - INFO - knowledgebase_service.py:55 - 正在为新的知识库64a43076a09f47ebb85cb1b0e0c66e21上传封面图片，文件名:Snipaste_2026-01-06_11-12-51.png,路径:covers/64a43076a09f47ebb85cb1b0e0c66e21.png
+2026-01-16 17:51:42,610- app.services.storage.local_storage - INFO - local_storage.py:32 - 文件已经上传:covers/64a43076a09f47ebb85cb1b0e0c66e21.png
+2026-01-16 17:51:42,610- KnowledgebaseService - INFO - knowledgebase_service.py:59 - 成功上传知识库的封面图片:covers/64a43076a09f47ebb85cb1b0e0c66e21.png
+2026-01-16 17:51:42,621- KnowledgebaseService - INFO - knowledgebase_service.py:66 - 创建知识库成功:ID:{kb.id}
+2026-01-16 17:51:42,628- werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [16/Jan/2026 17:51:42] "POST /api/v1/kb HTTP/1.1" 200 -
+2026-01-16 17:51:42,665- werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [16/Jan/2026 17:51:42] "GET /kb?search=&sort_by=created_at&sort_order=desc&page=1&page_size=10 HTTP/1.1" 200 -
+2026-01-16 17:51:42,697- werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [16/Jan/2026 17:51:42] "[33mGET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1[0m" 404 -
+2026-01-16 17:51:42,721- app.services.storage.local_storage - INFO - local_storage.py:47 - 文件已经下载成功:/Users/weiwenhao/Desktop/study/rag_lite/storages/covers/64a43076a09f47ebb85cb1b0e0c66e21.png
+2026-01-16 17:51:42,722- werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [16/Jan/2026 17:51:42] "GET /kb/64a43076a09f47ebb85cb1b0e0c66e21/cover HTTP/1.1" 200 -
+2026-01-16 17:52:07,292- werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [16/Jan/2026 17:52:07] "GET /kb?search=&sort_by=created_at&sort_order=desc&page=1&page_size=10 HTTP/1.1" 200 -
+2026-01-16 17:52:07,342- werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [16/Jan/2026 17:52:07] "[33mGET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1[0m" 404 -
+2026-01-16 17:52:07,361- app.services.storage.local_storage - INFO - local_storage.py:47 - 文件已经下载成功:/Users/weiwenhao/Desktop/study/rag_lite/storages/covers/64a43076a09f47ebb85cb1b0e0c66e21.png
+2026-01-16 17:52:07,363- werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [16/Jan/2026 17:52:07] "GET /kb/64a43076a09f47ebb85cb1b0e0c66e21/cover HTTP/1.1" 200 -
+2026-01-16 17:52:10,075- app.services.storage.local_storage - INFO - local_storage.py:47 - 文件已经下载成功:/Users/weiwenhao/Desktop/study/rag_lite/storages/covers/64a43076a09f47ebb85cb1b0e0c66e21.png
+2026-01-16 17:52:10,077- werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [16/Jan/2026 17:52:10] "GET /kb/64a43076a09f47ebb85cb1b0e0c66e21/cover HTTP/1.1" 200 -
+2026-01-16 17:52:27,725- werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [16/Jan/2026 17:52:27] "GET / HTTP/1.1" 200 -
+2026-01-16 17:52:29,553- werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [16/Jan/2026 17:52:29] "GET /kb HTTP/1.1" 200 -
+2026-01-16 17:52:29,629- app.services.storage.local_storage - INFO - local_storage.py:47 - 文件已经下载成功:/Users/weiwenhao/Desktop/study/rag_lite/storages/covers/64a43076a09f47ebb85cb1b0e0c66e21.png
+2026-01-16 17:52:29,629- werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [16/Jan/2026 17:52:29] "GET /kb/64a43076a09f47ebb85cb1b0e0c66e21/cover HTTP/1.1" 200 -
+2026-01-16 17:52:31,293- werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [16/Jan/2026 17:52:31] "GET / HTTP/1.1" 200 -
+2026-01-16 17:52:34,072- werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [16/Jan/2026 17:52:34] "GET /kb HTTP/1.1" 200 -
+2026-01-16 17:52:34,104- app.services.storage.local_storage - INFO - local_storage.py:47 - 文件已经下载成功:/Users/weiwenhao/Desktop/study/rag_lite/storages/covers/64a43076a09f47ebb85cb1b0e0c66e21.png
+2026-01-16 17:52:34,105- werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [16/Jan/2026 17:52:34] "GET /kb/64a43076a09f47ebb85cb1b0e0c66e21/cover HTTP/1.1" 200 -
+2026-01-16 17:53:38,720- KnowledgebaseService - INFO - knowledgebase_service.py:113 - 删除知识库:64a43076a09f47ebb85cb1b0e0c66e21 cd
+2026-01-16 17:53:38,734- werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [16/Jan/2026 17:53:38] "DELETE /api/v1/kb/64a43076a09f47ebb85cb1b0e0c66e21 HTTP/1.1" 200 -
+2026-01-16 17:53:38,763- werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [16/Jan/2026 17:53:38] "GET /kb HTTP/1.1" 200 -
+2026-01-16 17:55:01,970- app.blueprints.knowledgebase - INFO - knowledgebase.py:53 - 收到新的知识库的封面图片：文件名:Snipaste_2026-01-06_11-12-51.png,大小:277180,内容类型:image/png
+2026-01-16 17:55:01,973- KnowledgebaseService - INFO - knowledgebase_service.py:55 - 正在为新的知识库afcb6ef5800344d0a41cf587cfabe923上传封面图片，文件名:Snipaste_2026-01-06_11-12-51.png,路径:covers/afcb6ef5800344d0a41cf587cfabe923.png
+2026-01-16 17:55:01,974- app.services.storage.local_storage - INFO - local_storage.py:32 - 文件已经上传:covers/afcb6ef5800344d0a41cf587cfabe923.png
+2026-01-16 17:55:01,974- KnowledgebaseService - INFO - knowledgebase_service.py:59 - 成功上传知识库的封面图片:covers/afcb6ef5800344d0a41cf587cfabe923.png
+2026-01-16 17:55:01,981- KnowledgebaseService - INFO - knowledgebase_service.py:66 - 创建知识库成功:ID:{kb.id}
+2026-01-16 17:55:01,986- werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [16/Jan/2026 17:55:01] "POST /api/v1/kb HTTP/1.1" 200 -
+2026-01-16 17:55:02,009- werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [16/Jan/2026 17:55:02] "GET /kb HTTP/1.1" 200 -
+2026-01-16 17:55:02,041- app.services.storage.local_storage - INFO - local_storage.py:47 - 文件已经下载成功:/Users/weiwenhao/Desktop/study/rag_lite/storages/covers/afcb6ef5800344d0a41cf587cfabe923.png
+2026-01-16 17:55:02,042- werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [16/Jan/2026 17:55:02] "GET /kb/afcb6ef5800344d0a41cf587cfabe923/cover HTTP/1.1" 200 -
+2026-01-16 17:55:07,420- KnowledgebaseService - INFO - knowledgebase_service.py:168 - 更新知识库:afcb6ef5800344d0a41cf587cfabe923 ceshi
+2026-01-16 17:55:07,424- werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [16/Jan/2026 17:55:07] "PUT /api/v1/kb/afcb6ef5800344d0a41cf587cfabe923 HTTP/1.1" 200 -
+2026-01-16 17:55:07,447- werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [16/Jan/2026 17:55:07] "GET /kb HTTP/1.1" 200 -
+2026-01-16 17:55:07,484- app.services.storage.local_storage - INFO - local_storage.py:47 - 文件已经下载成功:/Users/weiwenhao/Desktop/study/rag_lite/storages/covers/afcb6ef5800344d0a41cf587cfabe923.png
+2026-01-16 17:55:07,485- werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [16/Jan/2026 17:55:07] "GET /kb/afcb6ef5800344d0a41cf587cfabe923/cover HTTP/1.1" 200 -

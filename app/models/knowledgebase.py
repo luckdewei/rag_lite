@@ -19,7 +19,10 @@ class Knowledgebase(BaseModel):
         index=True,
     )
     # 知识库的名称
-    name = Column(String(128), nullable=False, unique=True, index=True)
+    # name = Column(String(128), nullable=False, unique=True, index=True)
+    name: Mapped[str] = mapped_column(  # 2.0写法
+        String(128), nullable=False, unique=True, index=True
+    )
     # 知识库描述
     description = Column(Text, nullable=True)
     # 知识库封面图片路径 可以存储到本地硬盘上，也可以保存到minio等对象存储中去
