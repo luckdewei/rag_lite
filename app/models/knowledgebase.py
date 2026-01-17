@@ -1,4 +1,12 @@
-from sqlalchemy import Column, String, DateTime, Integer, Text, ForeignKey
+from sqlalchemy import (
+    Column,
+    String,
+    DateTime,
+    Integer,
+    Text,
+    ForeignKey,
+    UniqueConstraint,
+)
 from sqlalchemy.sql import func
 from sqlalchemy.orm import Mapped, mapped_column
 import uuid
@@ -10,6 +18,11 @@ class Knowledgebase(BaseModel):
     __tablename__ = "knowledgebase"
     # 指定__repr__显示的字段
     __repr_fields__ = ["id", "name"]
+    __table_args__ = (
+        UniqueConstraint(
+            "user_id", "name", name="uk_user_kb_name"  # 约束名，后期维护很重要
+        ),
+    )
     id = Column(String(32), primary_key=True, default=lambda: uuid.uuid4().hex[:32])
     # 定义用户ID，外键关联到user表的id,删除用户时级联删除，不能为空，并且建有索引
     user_id = Column(
@@ -21,7 +34,8 @@ class Knowledgebase(BaseModel):
     # 知识库的名称
     # name = Column(String(128), nullable=False, unique=True, index=True)
     name: Mapped[str] = mapped_column(  # 2.0写法
-        String(128), nullable=False, unique=True, index=True
+        String(128),
+        nullable=False,
     )
     # 知识库描述
     description = Column(Text, nullable=True)

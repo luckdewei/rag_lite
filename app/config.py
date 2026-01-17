@@ -14,7 +14,7 @@ class Config:
     # 服务器监听的端口号
     APP_PORT = os.environ.get("APP_PORT", 5000)
     # 是否启动调用模式
-    APP_DEBUG = os.environ.get("APP_DEBUG", "false").lower() == "true"
+    APP_DEBUG = os.environ.get("APP_DEBUG", "true").lower() == "true"
     # 上传的文件的最大文件大小
     MAX_FILE_SIZE = os.environ.get("MAX_FILE_SIZE", 104857600)  # 100M
     # 允许 上传的文件

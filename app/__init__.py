@@ -34,10 +34,10 @@ def create_app(config_class=Config):
     def inject_user():
         return dict(current_user=get_current_user())
 
-    from app.blueprints import auth, knowledgebase
+    # from app.blueprints import auth, knowledgebase, settings
+    from app.blueprints import register_blueprints
 
-    app.register_blueprint(auth.bp)
-    app.register_blueprint(knowledgebase.bp)
+    register_blueprints(app)
 
     app.config.from_object(config_class)
 
