@@ -1377,3 +1377,25 @@ UnboundLocalError: cannot access local variable 'next_url' where it is not assoc
 2026-01-17 11:32:38,856- app.utils.db - ERROR - db.py:46 - 数据库会话错误:type object 'Config' has no attribute 'DEEPSEEK_CHAT_MODEL'
 2026-01-17 11:32:38,862- app.blueprints.utils - WARNING - utils.py:29 - ValueError in api_get_settings:type object 'Config' has no attribute 'DEEPSEEK_CHAT_MODEL'
 2026-01-17 11:32:38,865- werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [17/Jan/2026 11:32:38] "[35m[1mGET /api/v1/settings HTTP/1.1[0m" 500 -
+2026-01-17 11:35:19,741- werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [17/Jan/2026 11:35:19] "GET / HTTP/1.1" 200 -
+2026-01-17 11:35:19,776- werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [17/Jan/2026 11:35:19] "[33mGET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1[0m" 404 -
+2026-01-17 11:35:26,695- werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [17/Jan/2026 11:35:26] "GET /kb HTTP/1.1" 200 -
+2026-01-17 11:35:26,713- werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [17/Jan/2026 11:35:26] "[33mGET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1[0m" 404 -
+2026-01-17 11:35:26,724- app.services.storage.local_storage - INFO - local_storage.py:47 - 文件已经下载成功:/Users/rihime/Desktop/study/rag_lite/storages/covers/239e339bd92e439e9b4dbb1b821c6832.jpg
+2026-01-17 11:35:26,724- werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [17/Jan/2026 11:35:26] "GET /kb/239e339bd92e439e9b4dbb1b821c6832/cover HTTP/1.1" 200 -
+2026-01-17 11:35:52,963- app.blueprints.knowledgebase - INFO - knowledgebase.py:149 - 收到知识库的新的封面图片：文件名:my-image-name.jpeg,大小:52299,内容类型:image/jpeg
+2026-01-17 11:35:52,967- app.services.storage.local_storage - INFO - local_storage.py:32 - 文件已经上传:covers/7040dc8ebc314cb6a181095c362a3202.jpeg
+2026-01-17 11:35:52,972- KnowledgebaseService - INFO - knowledgebase_service.py:174 - 更新知识库:7040dc8ebc314cb6a181095c362a3202 ceshi
+2026-01-17 11:35:52,978- werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [17/Jan/2026 11:35:52] "PUT /api/v1/kb/7040dc8ebc314cb6a181095c362a3202 HTTP/1.1" 200 -
+2026-01-17 11:35:53,000- werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [17/Jan/2026 11:35:53] "GET /kb HTTP/1.1" 200 -
+2026-01-17 11:35:53,018- werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [17/Jan/2026 11:35:53] "[33mGET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1[0m" 404 -
+2026-01-17 11:35:53,029- app.services.storage.local_storage - INFO - local_storage.py:47 - 文件已经下载成功:/Users/rihime/Desktop/study/rag_lite/storages/covers/239e339bd92e439e9b4dbb1b821c6832.jpg
+2026-01-17 11:35:53,032- werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [17/Jan/2026 11:35:53] "GET /kb/239e339bd92e439e9b4dbb1b821c6832/cover HTTP/1.1" 200 -
+2026-01-17 11:35:53,032- app.services.storage.local_storage - INFO - local_storage.py:47 - 文件已经下载成功:/Users/rihime/Desktop/study/rag_lite/storages/covers/7040dc8ebc314cb6a181095c362a3202.jpeg
+2026-01-17 11:35:53,033- werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [17/Jan/2026 11:35:53] "GET /kb/7040dc8ebc314cb6a181095c362a3202/cover HTTP/1.1" 200 -
+2026-01-17 11:36:02,498- KnowledgebaseService - INFO - knowledgebase_service.py:119 - 删除知识库:7040dc8ebc314cb6a181095c362a3202 ceshi
+2026-01-17 11:36:02,506- werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [17/Jan/2026 11:36:02] "DELETE /api/v1/kb/7040dc8ebc314cb6a181095c362a3202 HTTP/1.1" 200 -
+2026-01-17 11:36:02,522- werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [17/Jan/2026 11:36:02] "GET /kb HTTP/1.1" 200 -
+2026-01-17 11:36:02,537- werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [17/Jan/2026 11:36:02] "[33mGET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1[0m" 404 -
+2026-01-17 11:36:02,550- app.services.storage.local_storage - INFO - local_storage.py:47 - 文件已经下载成功:/Users/rihime/Desktop/study/rag_lite/storages/covers/239e339bd92e439e9b4dbb1b821c6832.jpg
+2026-01-17 11:36:02,550- werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [17/Jan/2026 11:36:02] "GET /kb/239e339bd92e439e9b4dbb1b821c6832/cover HTTP/1.1" 200 -
