@@ -16,7 +16,7 @@ class Config:
     # 是否启动调用模式
     APP_DEBUG = os.environ.get("APP_DEBUG", "true").lower() == "true"
     # 上传的文件的最大文件大小
-    MAX_FILE_SIZE = os.environ.get("MAX_FILE_SIZE", 104857600)  # 100M
+    MAX_FILE_SIZE = int(os.environ.get("MAX_FILE_SIZE", 104857600))  # 100M
     # 允许 上传的文件
     ALLOWED_EXTENSIONS = {"pdf", "docx", "txt", "md"}
     # 允许 上传的图片的扩展名

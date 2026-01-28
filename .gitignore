@@ -35,3 +35,4 @@ logs/
 covers
 storages
 chroma_db
+data/*

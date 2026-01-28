@@ -24,6 +24,9 @@ from app.blueprints.utils import (
 from app.utils.auth import get_current_user, login_required, api_login_required
 from app.services.storage_service import storage_service
 
+# 导入文档服务
+from app.services.document_service import document_service
+
 logger = get_logger(__name__)
 
 bp = Blueprint("knowledgebase", __name__)
@@ -215,3 +218,20 @@ def kb_cover(kb_id):
     except Exception as e:
         logger.error(f"访问知识库图片路径时出错:{cover_path},错误：{e}")
         abort(404)
+
+
+# 设置路由，访问/kb/<kb_id> 触发此视图函数
+@bp.route("/kb/<kb_id>")
+@login_required
+def kb_detail(kb_id):
+    """知识库详情页面"""
+    kb = kb_service.get_by_id(kb_id)
+    # 如果没有找到知识库，则重定向回到知识库列表
+    if not kb:
+        return redirect(url_for("knowledgebase.kb_list"))
+    page, page_size = get_pagination_params(max_page_size=100)
+    result = document_service.list_by_kb(kb_id, page=page, page_size=page_size)
+
+    return render_template(
+        "kb_detail.html", kb=kb, documents=result["items"], pagination=result
+    )
