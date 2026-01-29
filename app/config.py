@@ -10,7 +10,7 @@ class Config:
 
     # 应用配置
     # 应用监听的主机地址
-    APP_HOST = os.environ.get("APP_HOST", "0.0.0.0")
+    APP_HOST = os.environ.get("APP_HOST", "127.0.0.1")
     # 服务器监听的端口号
     APP_PORT = os.environ.get("APP_PORT", 5000)
     # 是否启动调用模式
@@ -57,3 +57,15 @@ class Config:
     MINIO_BUCKET_NAME = os.environ.get("MINIO_BUCKET_NAME", "rag-lite")
     MINIO_SECURE = os.environ.get("MINIO_SECURE", "false").lower() == "true"
     MINIO_REGION = os.environ.get("MINIO_REGION", None)
+
+    DEEPSEEK_CHAT_MODEL = os.environ.get("DEEPSEEK_CHAT_MODEL", "deepseek-chat")
+    DEEPSEEK_API_KEY = os.environ.get("DEEPSEEK_API_KEY")
+    DEEPSEEK_BASE_URL = os.environ.get("DEEPSEEK_BASE_URL", "https://api.deepseek.com")
+
+    # 指定向量数据库的类型
+    VECTOR_DB_TYPE = os.environ.get("VECTOR_DB_TYPE", "chroma")  # chroma 或 milvus
+    # 指定 chroma向量数据库的本地存储目录
+    CHROMA_PERSIST_DIRECTORY = os.environ.get("CHROMA_PERSIST_DIRECTORY", "./chroma_db")
+
+    MILVUS_HOST = os.environ.get("MILVUS_HOST", "localhost")
+    MILVUS_PORT = os.environ.get("MILVUS_PORT", "19530")
