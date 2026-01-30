@@ -57,3 +57,43 @@ class VectorDBInterface(ABC):
         """
         # 子类需要实现具体逻辑
         pass
+
+    @abstractmethod
+    def similarity_search(
+        self,
+        collection_name: str,
+        query: str,
+        k: int = 5,
+        filter: Optional[Dict] = None,
+    ) -> List[Document]:
+        """
+        相似度搜索
+        Args:
+            collection_name: 集合名称
+            query: 查询文本
+            k: 返回结果数量
+            filter: 元数据过滤条件
+        Returns:
+            检索到的 Document 列表
+        """
+        pass
+
+    @abstractmethod
+    def similarity_search_with_score(
+        self,
+        collection_name: str,
+        query: str,
+        k: int = 5,
+        filter: Optional[Dict] = None,
+    ) -> List[tuple]:
+        """
+        相似度搜索（带分数）
+        Args:
+            collection_name: 集合名称
+            query: 查询文本
+            k: 返回结果数量
+            filter: 元数据过滤条件
+        Returns:
+            (Document, score) 元组列表
+        """
+        pass

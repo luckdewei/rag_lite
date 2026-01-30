@@ -14,6 +14,9 @@ from app.services.vectordb.base import VectorDBInterface
 # 导入 Chroma 的向量数据库实现
 from app.services.vectordb.chroma import ChromaVectorDB
 
+# 导入 Milvus 的向量数据库实现
+from app.services.vectordb.milvus import MilvusVectorDB
+
 # 导入全局配置
 from app.config import Config
 
@@ -46,7 +49,7 @@ class VectorDBFactory:
         """
         # 如果未传入 vectordb_type，则从配置读取，默认 'chroma'
         if vectordb_type is None:
-            vectordb_type = getattr(Config, "VECTORDB_TYPE", "chroma")
+            vectordb_type = getattr(Config, "VECTOR_DB_TYPE", "chroma")
 
         # 转为小写，统一判断
         vectordb_type = vectordb_type.lower()
@@ -57,6 +60,15 @@ class VectorDBFactory:
             persist_directory = kwargs.get("persist_directory")
             # 创建 ChromaVectorDB 实例并返回
             return ChromaVectorDB(persist_directory=persist_directory)
+
+        elif vectordb_type == "milvus":
+            # 从 kwargs 获取连接参数，如果没有则使用配置中的默认值（主机和端口）
+            connection_args = kwargs.get("connection_args") or {
+                "host": getattr(Config, "MILVUS_HOST", "localhost"),
+                "port": getattr(Config, "MILVUS_PORT", "19530"),
+            }
+            # 创建 MilvusVectorDB 实例，并传入连接参数
+            return MilvusVectorDB(connection_args=connection_args)
         else:
             # 其他类型暂不支持，抛出异常
             raise ValueError(f"Unsupported vector database type: {vectordb_type}")

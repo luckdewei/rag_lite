@@ -3,7 +3,7 @@
 """
 
 # 从 Flask 导入 Blueprint 和 request，用于定义蓝图和处理请求
-from flask import Blueprint, request
+from flask import Blueprint, request, flash, redirect, url_for, render_template
 
 # 导入 os 模块，用于文件名后缀等操作
 import os
@@ -19,6 +19,11 @@ from app.services.document_service import document_service
 
 # 导入配置文件，获取相关配置参数
 from app.config import Config
+from app.utils.auth import login_required
+
+# 导入知识库服务
+from app.services.knowledgebase_service import kb_service
+from app.models.document import Document as DocumentModel
 
 # 设置日志对象
 logger = logging.getLogger(__name__)
@@ -119,3 +124,72 @@ def api_process(doc_id):
         logger.error(f"处理文档时出错: {e}", exc_info=True)
         # 返回500通用错误响应，附带错误原因
         return error_response(f"处理文档失败: {str(e)}", 500)
+
+
+# 路由：文档分块列表页面，URL中包含doc_id
+@bp.route("/documents/<doc_id>/chunks")
+# 需要用户登录
+@login_required
+def document_chunks(doc_id):
+    # 文档分块列表页面
+    """文档分块列表页面"""
+    # 根据文档ID获取文档对象
+    doc = document_service.get_by_id(DocumentModel, doc_id)
+    # 如果文档不存在，提示错误并跳转到知识库列表页面
+    if not doc:
+        flash("文档不存在", "error")
+        return redirect(url_for("knowledgebase.kb_list"))
+    # 根据文档的kb_id获取对应的知识库对象
+    kb = kb_service.get_by_id(doc.kb_id)
+    # 如果知识库不存在，提示错误并跳转到知识库列表页面
+    if not kb:
+        flash("知识库不存在", "error")
+        return redirect(url_for("knowledgebase.kb_list"))
+    # 获取分块数据
+    try:
+        # 动态导入向量数据库服务工厂方法
+        from app.services.vectordb.factory import get_vector_db_service
+
+        # 组合向量数据库中的 collection 名称
+        collection_name = f"kb_{doc.kb_id}"
+        # 获取向量数据库服务实例
+        vectordb = get_vector_db_service()
+        # 构建过滤条件，只获取当前文档的分块
+        filter_dict = {"doc_id": doc_id}
+        # 通过similarity_search_with_score方法，检索所有属于该文档的分块
+        results = vectordb.similarity_search_with_score(
+            collection_name=collection_name,
+            query="",  # 用空格作为查询内容，目的是获取所有分块
+            k=1000,  # 设置很大的k值来避免遗漏分块
+            filter=filter_dict,  # 应用文档ID过滤
+        )
+        print(f"vector_service查询到的结果:{len(results)}")
+        # 提取查询结果中的Document对象，准备排序
+        chunks = [doc for doc, _ in results]
+        # 按chunk_index进行排序，保证顺序和原始文档一致
+        chunks.sort(key=lambda d: d.metadata.get("chunk_index", 0))
+        # 初始化分块列表
+        chunks_data = []
+        # 遍历所有分块对象，整理为前端模板使用的字典格式
+        for chunk in chunks:
+            chunks_data.append(
+                {
+                    # 分块ID，如果不存在则尝试兼容chunk_id字段
+                    "id": chunk.metadata.get("id")
+                    or chunk.metadata.get("chunk_id", ""),
+                    # 分块文本内容
+                    "content": chunk.page_content,
+                    # 分块在文档中的序号
+                    "chunk_index": chunk.metadata.get("chunk_index", 0),
+                    # 分块的原始元数据
+                    "metadata": chunk.metadata,
+                }
+            )
+    # 捕获异常，如果出错则记录日志，并展示空分块列表
+    except Exception as e:
+        logger.error(f"获取分块数据失败: {e}")
+        chunks_data = []
+    # 渲染模板，传递知识库、文档及分块列表数据给页面
+    return render_template(
+        "document_chunks.html", kb=kb, document=doc.to_dict(), chunks=chunks_data
+    )

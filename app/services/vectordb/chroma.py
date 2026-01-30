@@ -134,3 +134,30 @@ class ChromaVectorDB(VectorDBInterface):
         else:
             raise ValueError(f"你既没有传ids,也没有传filter")
         logger.info(f"已经从ChromDB集合{collection_name}删除文档")
+
+    # 定义相似度方法
+    def similarity_search(
+        self, collection_name, query, k=5, filter=None
+    ) -> List[Document]:
+        # 获取或创建集合对应的向量存储对象
+        vectorstore = self.get_or_create_collection(collection_name)
+
+        # 如何指定了过滤条件
+        if filter:
+            result = vectorstore.similarity_search(query=query, k=k, filter=filter)
+        else:
+            result = vectorstore.similarity_search(query=query, k=k)
+        return result
+
+    # 定义带分数的相似度搜索方法
+    def similarity_search_with_score(
+        self, collection_name, query, k=5, filter=None
+    ) -> List[Document]:
+        vectorstore = self.get_or_create_collection(collection_name)
+        if filter:
+            result = vectorstore.similarity_search_with_score(
+                query=query, k=k, filter=filter
+            )
+        else:
+            result = vectorstore.similarity_search_with_score(query=query, k=k)
+        return result

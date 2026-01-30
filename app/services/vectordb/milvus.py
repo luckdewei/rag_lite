@@ -55,7 +55,7 @@ class MilvusVectorDB(VectorDBInterface):
         logger.info(f"Milvus 已初始化, 连接参数: {connection_args}")
 
     # 获取或创建 Milvus 向量集合的方法
-    def get_or_create_collection(self, collection_name: str) -> Any:
+    def get_or_create_collection(self, collection_name: str) -> Milvus:
         """获取或创建向量存储"""
         # 拷贝一份连接参数，检查端口类型
         connection_args = self.connection_args.copy()
@@ -145,3 +145,52 @@ class MilvusVectorDB(VectorDBInterface):
             vectorstore._collection.flush()
         # 记录删除操作的日志
         logger.info(f"已经从ChromDB集合{collection_name}删除文档")
+
+    # 定义相似度搜索方法
+    def similarity_search(self, collection_name, query, k=5, filter=None):
+        vectorstore = self.get_or_create_collection(collection_name)
+        # 检查集合是否已被加载（LangChain Milvus 一般自动处理，这里显式保证）
+        if hasattr(vectorstore, "_collection"):
+            try:
+                vectorstore._collection.load()
+            except Exception as e:
+                logger.debug(f"集合可能已加载或加载失败: {e}")
+        if filter:
+            results = vectorstore.similarity_search(query=query, k=k, expr=filter)
+        else:
+            results = vectorstore.similarity_search(query=query, k=k)
+        return results
+
+    # 定义带分数的相似度搜索方法
+    def similarity_search_with_score(
+        self,
+        collection_name: str,
+        query: str,
+        k: int = 5,
+        filter: Optional[Dict] = None,
+    ) -> List[tuple]:
+        # 获取对应名称的向量存储集合
+        vectorstore = self.get_or_create_collection(collection_name)
+        # 判断集合对象是否有"_collection"属性（Milvus 后端可能有，需要显式加载）
+        if hasattr(vectorstore, "_collection"):
+            try:
+                # 显式加载集合（加速后续搜索操作）
+                vectorstore._collection.load()
+                logger.info(f"已经加载集合{collection_name}")
+            except Exception as e:
+                # 加载失败/集合不存在时记录日志，不影响流程
+                logger.info(f"集合可能不存在：{e}")
+        # 如果传递了过滤条件
+        if filter:
+            # 根据过滤条件构造Milvus的过滤表达式，只支持doc_id精准查询
+            expr = f'doc_id=="{filter["doc_id"]}"'
+            # 带过滤表达式执行相似度检索，并拿到分数
+            results = vectorstore.similarity_search_with_score(
+                query=query, k=k, expr=expr
+            )
+            print("filter_results", len(results))
+        else:
+            # 如果没有过滤条件，直接执行检索
+            results = vectorstore.similarity_search_with_score(query=query, k=k)
+        # 返回(检索文档, 分数)结果列表
+        return results

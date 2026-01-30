@@ -63,7 +63,8 @@ class Config:
     DEEPSEEK_BASE_URL = os.environ.get("DEEPSEEK_BASE_URL", "https://api.deepseek.com")
 
     # 指定向量数据库的类型
-    VECTOR_DB_TYPE = os.environ.get("VECTOR_DB_TYPE", "chroma")  # chroma 或 milvus
+    VECTOR_DB_TYPE = os.environ.get("VECTOR_DB_TYPE", "milvus")  # chroma 或 milvus
+
     # 指定 chroma向量数据库的本地存储目录
     CHROMA_PERSIST_DIRECTORY = os.environ.get("CHROMA_PERSIST_DIRECTORY", "./chroma_db")
 

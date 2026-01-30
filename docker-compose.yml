@@ -9,7 +9,7 @@ services:
       MYSQL_ROOT_PASSWORD: ${DB_PASSWORD}
       MYSQL_DATABASE: ${DB_NAME}
     volumes:
-      - ./data/mysql8:/var/lib/mysql
+      - ${DOCKER_VOLUME_DIRECTORY:-.}/volumes/mysql8:/var/lib/mysql
 
   etcd:
     container_name: milvus-etcd
