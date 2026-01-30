@@ -334,6 +334,49 @@ class DocumentService(BaseService[DocumentModel]):
             # 记录处理失败的日志
             self.logger.error(f"处理文档 {doc_id} 时发生错误: {e}")
 
+    def delete(self, doc_id):
+        """
+        删除文档
+        包括：删除向量数据库中的向量数据、删除存储中的文件、删除数据库记录
+        """
+        with self.session() as session:
+            doc = (
+                session.query(DocumentModel).filter(DocumentModel.id == doc_id).first()
+            )
+            if not doc:
+                raise ValueError(f"文档{doc_id}不存在")
+
+            # 保存需要删除的信息
+            kb_id = doc.kb_id
+            file_path = doc.file_path
+            collection_name = f"kb_{kb_id}"
+
+        # 1. 删除向量数据库中的相关向量数据
+        try:
+            vector_service.delete_documents(
+                collection_name=collection_name, filter={"doc_id": doc_id}
+            )
+            self.logger.info(f"已删除文档{doc_id}的向量数据")
+        except Exception as e:
+            self.logger.warning(f"删除向量数据失败:{e}")
+
+        # 2. 删除存储中的文件
+        if file_path:
+            try:
+                storage_service.delete_file(file_path)
+                self.logger.info(f"已删除文档{doc_id}的存储文件:{file_path}")
+            except Exception as e:
+                self.logger.warning(f"删除存储文件失败:{e}")
+
+        # 3. 删除数据库记录
+        with self.transaction() as session:
+            doc = (
+                session.query(DocumentModel).filter(DocumentModel.id == doc_id).first()
+            )
+            if doc:
+                session.delete(doc)
+                self.logger.info(f"已删除文档{doc_id}的数据库记录")
+
 
 # 实例化DocumentService
 document_service = DocumentService()

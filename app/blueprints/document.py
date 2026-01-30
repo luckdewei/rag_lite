@@ -193,3 +193,17 @@ def document_chunks(doc_id):
     return render_template(
         "document_chunks.html", kb=kb, document=doc.to_dict(), chunks=chunks_data
     )
+
+
+@bp.route("/api/v1/documents/<doc_id>", methods=["DELETE"])
+@handle_api_error
+def api_delete(doc_id):
+    """删除文档API"""
+    try:
+        document_service.delete(doc_id)
+        return success_response({"message": "文档删除成功"})
+    except ValueError as e:
+        return error_response(str(e), 400)
+    except Exception as e:
+        logger.error(f"删除文档失败:{e}", exc_info=True)
+        return error_response(f"删除文档失败:{str(e)}", 500)
